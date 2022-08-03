@@ -1,18 +1,31 @@
 {
     "expired": {
-        "Android": 40,
-        "iOS": 12
+        "android": 0,
+        "iOS": 0,
+        "message": {
+            "default": {
+                "title": "",
+                "body": ""
+            }
+        }
     },
     "deprecated": {
-        "Android": 43,
-        "iOS": 15
+        "android": 0,
+        "iOS": 0,
+        "message": {
+            "default": {
+                "title": "",
+                "body": ""
+            }
+        }
     },
     "maintenance": {
         "underMaintenance": false,
         "message": {
-            "default": "",
-            "ko": "",
-            "en": ""
+            "default": {
+                "body": "",
+                "estimated": ""
+            }
         }
     }
 }
