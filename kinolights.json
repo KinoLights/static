@@ -1,31 +1,31 @@
 {
-    "expired": {
-        "android": 0,
-        "iOS": 0,
-        "message": {
-            "default": {
-                "title": "",
-                "body": ""
-            }
-        }
-    },
-    "deprecated": {
-        "android": 0,
-        "iOS": 0,
-        "message": {
-            "default": {
-                "title": "",
-                "body": ""
-            }
-        }
-    },
-    "maintenance": {
-        "underMaintenance": false,
-        "message": {
-            "default": {
-                "body": "",
-                "estimated": ""
-            }
-        }
+  "expired": {
+    "android": 0,
+    "iOS": 0,
+    "message": {
+      "default": {
+        "title": "",
+        "body": ""
+      }
     }
+  },
+  "deprecated": {
+    "android": 0,
+    "iOS": 0,
+    "message": {
+      "default": {
+        "title": "",
+        "body": ""
+      }
+    }
+  },
+  "maintenance": {
+    "underMaintenance": false,
+    "message": {
+      "default": {
+        "body": "",
+        "estimated": ""
+      }
+    }
+  }
 }

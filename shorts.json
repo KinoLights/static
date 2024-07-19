@@ -1,0 +1,67 @@
+{
+  "expired": {
+    "android": 0,
+    "iOS": 0,
+    "message": {
+      "ko": {
+        "title": "업데이트 필요",
+        "body": "최신 버전으로 업데이트 해주세요."
+      },
+      "en": {
+        "title": "Update required",
+        "body": "Please update to the latest version."
+      },
+      "es": {
+        "title": "Actualización necesaria",
+        "body": "Por favor, actualice a la última versión."
+      },
+      "zh-CN": {
+        "title": "需要更新",
+        "body": "请更新到最新版本。"
+      }
+    }
+  },
+  "deprecated": {
+    "android": 0,
+    "iOS": 0,
+    "message": {
+      "ko": {
+        "title": "업데이트 안내",
+        "body": "새로운 버전이 출시되었습니다. 앱을 업데이트 해주세요."
+      },
+      "en": {
+        "title": "Update information",
+        "body": "New version is available. Please update application."
+      },
+      "es": {
+        "title": "Actualizar información",
+        "body": "Hay una nueva versión disponible. Por favor, actualice la aplicación."
+      },
+      "zh-CN": {
+        "title": "更新信息",
+        "body": "新版本已发布。请更新应用程序。"
+      }
+    }
+  },
+  "maintenance": {
+    "underMaintenance": false,
+    "message": {
+      "ko": {
+        "title": "서비스 점검 안내",
+        "body": "서비스 점검 중입니다."
+      },
+      "en": {
+        "title": "Service maintenance information",
+        "body": "Service is under maintenance."
+      },
+      "es": {
+        "title": "Información de mantenimiento del servicio.",
+        "body": "El servicio está en mantenimiento."
+      },
+      "zh-CN": {
+        "title": "服务维护信息",
+        "body": "服务正在维护中"
+      }
+    }
+  }
+}
