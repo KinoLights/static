@@ -27,5 +27,10 @@
         "estimated": ""
       }
     }
+  },
+  "popcorn": {
+    "youtube": ["https://www.youtube.com/@kinolights"],
+    "instagram": ["https://www.instagram.com/kinolights"],
+    "others_video": ["https://youtu.be/Zc3W3xNHXbw?si=c5fOU3FXy92n_iwI"]
   }
 }
