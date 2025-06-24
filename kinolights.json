@@ -14,8 +14,8 @@
         }
     },
     "deprecated": {
-        "android": 43,
-        "iOS": 15,
+        "android": 200,
+        "iOS": 200,
         "message": {
             "default": {
                 "title": "작품 탐색 필터가 업데이트 되었어요",
