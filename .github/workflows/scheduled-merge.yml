@@ -2,7 +2,7 @@ name: Scheduled Auto Merge
 
 on:
   schedule:
-    - cron: "33 17 * * *"
+    - cron: "45 5 * * 1"
   workflow_dispatch:
 
 jobs:
@@ -33,11 +33,10 @@ jobs:
               const approved = reviews.some(r => r.state === "APPROVED");
               if (!approved) continue;
 
-              console.log(`Auto Merge PR #${pr.number}`);
               await github.rest.pulls.merge({
                 owner: context.repo.owner,
                 repo: context.repo.repo,
                 pull_number: pr.number,
-                merge_method: "merge",
+                merge_method: "squash",
               });
             }
