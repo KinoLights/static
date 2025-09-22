@@ -31,7 +31,9 @@ jobs:
               });
 
               const approved = reviews.some(r => r.state === "APPROVED");
-              if (!approved) continue;
+              const changesRequested = reviews.some(r => r.state === "CHANGES_REQUESTED");
+              
+              if (!approved || changesRequested) continue;
 
               await github.rest.pulls.merge({
                 owner: context.repo.owner,
