@@ -2,8 +2,7 @@ name: Scheduled Auto Merge
 
 on:
   schedule:
-    # 테스트용: 1회 실행 목표로 가장 가까운 시간으로 설정
-    - cron: "30 17 * * *" # 월요일 17:30 UTC = 월요일 02:30 KST
+    - cron: "45 5 * * 1"
   workflow_dispatch:
 
 jobs:
@@ -34,11 +33,10 @@ jobs:
               const approved = reviews.some(r => r.state === "APPROVED");
               if (!approved) continue;
 
-              console.log(`Auto Merge PR #${pr.number}`);
               await github.rest.pulls.merge({
                 owner: context.repo.owner,
                 repo: context.repo.repo,
                 pull_number: pr.number,
-                merge_method: "merge",
+                merge_method: "squash",
               });
             }
