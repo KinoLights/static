@@ -1,0 +1,44 @@
+name: Scheduled Auto Merge
+
+on:
+  schedule:
+    # 테스트용: 1회 실행 목표로 가장 가까운 시간으로 설정
+    - cron: "30 17 * * *" # 월요일 17:30 UTC = 월요일 02:30 KST
+  workflow_dispatch:
+
+jobs:
+  auto-merge:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Auto-merge PRs with schedule_merge label
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const { data: prs } = await github.rest.pulls.list({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: "open",
+            });
+
+            for (const pr of prs) {
+              const hasLabel = pr.labels.some(l => l.name === "schedule_merge");
+              if (!hasLabel || pr.draft) continue;
+
+              const { data: reviews } = await github.rest.pulls.listReviews({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                pull_number: pr.number,
+              });
+
+              const approved = reviews.some(r => r.state === "APPROVED");
+              if (!approved) continue;
+
+              console.log(`Auto Merge PR #${pr.number}`);
+              await github.rest.pulls.merge({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                pull_number: pr.number,
+                merge_method: "merge",
+              });
+            }
