@@ -30,10 +30,8 @@ jobs:
                 pull_number: pr.number,
               });
 
-              const approved = reviews.some(r => r.state === "APPROVED");
-              const changesRequested = reviews.some(r => r.state === "CHANGES_REQUESTED");
-              
-              const changesRequested = reviews.some(r => r.state === "CHANGES_REQUESTED");
+              const approved = reviews.some(r => r.state.toLowerCase() === "approved");
+              const changesRequested = reviews.some(r => r.state.toLowerCase() === "changes_requested");
               if (!approved || changesRequested) continue;
 
               await github.rest.pulls.merge({
