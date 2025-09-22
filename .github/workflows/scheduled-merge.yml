@@ -2,8 +2,7 @@ name: Scheduled Auto Merge
 
 on:
   schedule:
-    # 테스트용: 1회 실행 목표로 가장 가까운 시간으로 설정
-    - cron: "30 17 * * *" # 월요일 17:30 UTC = 월요일 02:30 KST
+    - cron: "33 17 * * *"
   workflow_dispatch:
 
 jobs:
