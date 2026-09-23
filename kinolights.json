@@ -37,7 +37,8 @@
         "ends_at": "2026-10-15",
         "thumbnail": "https://static.kinolights.com/popcorn/mission/260923_mission-watch_knock.gif",
         "title": "노크노크 5분 이상 보고 오면",
-        "earn_popcorn": 150
+        "earn_popcorn": 150,
+        "video": "https://www.youtube.com/watch?v=E3RcXhr3UuY"
       }
     ],
     "instagram": ["https://www.instagram.com/kinolights"],
