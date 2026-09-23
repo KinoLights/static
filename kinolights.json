@@ -31,7 +31,14 @@
   "popcorn": {
     "youtube": ["https://www.youtube.com/@kinolights"],
     "watch_mission": [
-      { "content_id": 11868, "starts_at": "2026-09-22", "ends_at": "2026-10-15" }
+      {
+        "content_id": 11868,
+        "starts_at": "2026-09-22",
+        "ends_at": "2026-10-15",
+        "thumbnail": "https://static.kinolights.com/popcorn/mission/260923_mission-watch_knock.gif",
+        "title": "노크노크 5분 이상 보고 오면",
+        "ean_popcorn": 150
+      }
     ],
     "instagram": ["https://www.instagram.com/kinolights"],
     "others_video": [
